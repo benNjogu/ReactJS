@@ -1,6 +1,6 @@
 
 function sayHello() {
-    for (var i = 0; i < 5; i++) {
+    for (let i = 0; i < 5; i++) {
         console.log(i);
     }
 
@@ -9,4 +9,4 @@ function sayHello() {
 
 sayHello();
 
-//with var i is accessible outside the for loop
+//with let i is not accessible outside the for loop
