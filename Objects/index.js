@@ -1,12 +1,12 @@
 
 const person = {
     name: 'Ben',
-    walk() { },
-    talk() { }
+    walk() {
+        console.log(this);
+    }
 }
 
-person.talk();
-person.name = '';
+person.walk();//Returns the person object
 
-const targetMember = 'name';
-person[targetMember.value] = 'John';
+const walk = person.walk;
+walk();//Returns the window object
