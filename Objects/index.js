@@ -6,7 +6,7 @@ const person = {
     }
 }
 
-person.walk();//Returns the person object
+person.walk();
 
-const walk = person.walk;
-walk();//Returns the window object
+const walk = person.walk.bind(person);
+walk();//Returns person object
