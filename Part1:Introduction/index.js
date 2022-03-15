@@ -1,12 +1,10 @@
 
-function sayHello() {
-    for (let i = 0; i < 5; i++) {
-        console.log(i);
-    }
+const x = 1;
+x = 2;
 
-    console.log(i);
-}
+console.log(x);
 
-sayHello();
-
-//with let i is not accessible outside the for loop
+/**
+ * The above throws an error because x is read only
+ * Its a constant and cannot be reassigned
+ */
