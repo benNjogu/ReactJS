@@ -1,9 +1,13 @@
 
-const jobs = [
-    { id: 1, isActive: true },
-    { id: 2, isActive: true },
-    { id: 3, isActive: false }
-]
+const person = {
 
-const activeJobs = jobs.filter(job => job.isActive);
-console.log(activeJobs);
+    talk() {
+        setTimeout(function () {
+            console.log('this', this);
+        }, 100);
+
+    }
+}
+
+person.talk();
+//in the above, the this returns reference to the window object
