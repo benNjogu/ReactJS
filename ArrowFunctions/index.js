@@ -2,12 +2,10 @@
 const person = {
 
     talk() {
-        setTimeout(function () {
-            console.log('this', this);
-        }, 100);
+        setTimeout(() => console.log('this', this), 100);
 
     }
 }
 
 person.talk();
-//in the above, the this returns reference to the window object
+//with arrow functions this inherits this in the context in which it was defined.
