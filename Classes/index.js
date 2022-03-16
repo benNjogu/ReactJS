@@ -1,7 +1,7 @@
-import { Teacher } from "./teacher.js";
+import Teacher from "./teacher.js";
 
 const teacher = new Teacher('Abby', 'Bsc.');
 teacher.walk();
 
-//With the braces above around teacher, it is a great indication 
-//that it is a named export
+//Without the braces teacher is a default export.
+//This requires a default keyword on the class
