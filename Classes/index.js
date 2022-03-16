@@ -9,5 +9,16 @@ class Person {
     }
 }
 
-const person = new Person('Ben');
-person.walk();
+class Teacher extends Person {
+    constructor(name, degree) {
+        super(name);
+        this.degree = degree;
+    }
+
+    teach() {
+        console.log('teaching');
+    }
+}
+
+const teacher = new Teacher('Ben', 'bsc');
+teacher.walk();
