@@ -16,8 +16,6 @@ class Counter extends Component {
   };
 
   render() {
-    console.log(this.props);
-
     return (
       <div>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
@@ -26,6 +24,12 @@ class Counter extends Component {
           className="btn btn-secondary btn-sm"
         >
           Increment
+        </button>
+        <button
+          onClick={this.props.onDelete}
+          className="btn btn-danger btn-sm m-2"
+        >
+          Delete
         </button>
       </div>
     );
@@ -42,5 +46,9 @@ class Counter extends Component {
     return count === 0 ? "zero" : count;
   }
 }
+
+/**
+ * The component that owns a piece of the state should be the one modifying it.
+ */
 
 export default Counter;
