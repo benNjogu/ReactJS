@@ -4,6 +4,11 @@ class Counter extends Component {
   state = {
     value: this.props.value,
   };
+  /**
+   * props include data that we give to a component,
+   * state includes data that is private/local to a component.
+   * props is read-only.
+   */
 
   handleIncrement = (product) => {
     console.log(product);
@@ -15,7 +20,6 @@ class Counter extends Component {
 
     return (
       <div>
-        {this.props.children}
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
         <button
           onClick={() => this.handleIncrement({ id: 1 })}
