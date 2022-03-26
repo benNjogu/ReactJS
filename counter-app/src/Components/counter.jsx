@@ -6,6 +6,11 @@ class Counter extends Component {
     console.log("prevState", prevState);
   }
 
+  //called just before an element is removed from the dom
+  componentWillUnmount() {
+    console.log("Counter - Unmount");
+  }
+
   render() {
     return (
       <div>
