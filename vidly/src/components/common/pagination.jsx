@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 import _ from "lodash";
 
 const Pagination = (props) => {
@@ -27,11 +27,11 @@ const Pagination = (props) => {
   );
 };
 
-Pagination.PropTypes = {
-  itemsCount: PropTypes.number.isRequired,
-  pageSize: PropTypes.number.isRequired,
-  currentPage: PropTypes.number.isRequired,
-  onPageChange: PropTypes.func.isRequired,
+Pagination.propTypes = {
+  itemsCount: propTypes.number.isRequired,
+  pageSize: propTypes.number.isRequired,
+  currentPage: propTypes.number.isRequired,
+  onPageChange: propTypes.func.isRequired,
 };
 
 export default Pagination;
